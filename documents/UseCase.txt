@@ -1,0 +1,64 @@
+-------------------------------------##main application##-------------------------------------------------------------------
+#TaskTracker add task Use Case V1.0
+1. user open the CLI
+2. user enter first command to add a task
+3. application ask user for enter some info.:
+	3.1 enter name: A name of the task(task name)
+	3.2 enter description: A short description of the task
+	3.3 enter status: The status of the task (todo, in-progress, done)
+4.appication set ID and createdAt(The date and time when the task was created) for task
+5.application parse information at 3 step in JSON format
+6.appication write JSON data in a .json file
+7.json file save in current directory
+8.application display message: Task added successfully (ID: ?)
+## we should find name and verb in the use case:
+	name:user-CLI-command-task-id-description-status-createdAt-information-JSON data-file-current directory-message
+	verb:open-enter-add-ask-set-parse-write-save-display
+##every name is class(use common sense for create class that mean you can sense which name is class and which is not and which is attribute and etc.)
+##every verb is method(use common sense for create method that mean you can sense which verb is method and which is not.)
+##use encapsulation and inheritance for delegation
+##use interface and abstract class in right location
+##use aggregation and composition for create relation between class and manage dependencies
+##use use principle of software design(OCP-DRY-SRP-LSP)
+-----------------------------------##this is extend and change application##------------------------------------------------
+#TaskTracker Use Case V2.0: update task
+1. user open the cli application
+2. user enter command to update a task
+3. application ask user for enter ID of task
+4. user enter ID
+5. application ask user for info. that wants update
+	5.1 enter id: A unique identifier for the task(task name)
+	5.2 enter description: A short description of the task
+	5.3 enter status: The status of the task (todo, in-progress, done)
+8.appication set updatedAt(The date and time when the task was updated) for task
+9.application update info. and write in a file
+	9.1 if user was entered null(or empty) for any info., application don't update that info.
+10.application display message: Task updated successfully (ID: ?)
+-----------------------------------------------------------------------------------
+#TaskTracker Use Case V3.0: delete task
+1. user open the cli applicaltion
+2. user enter command to delete a task
+3. application ask user for enter ID of task
+4. user enter ID
+5.application display message: Task delete successfully (ID: ?)
+-----------------------------------------------------------------------------------
+#TaskTracker Use Case V4.0: tasks list
+1. user open the cli applicaltion
+2. user enter command to list task
+3. application ask user for enter one of below arguments:
+	- all(list all task)
+	- done(list of task is done)
+	- todo(list of task is todo)
+	- in-progress(list of tak in-progress)
+4. user enter argument
+5. application retrieve information based on input arg.
+-----------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
